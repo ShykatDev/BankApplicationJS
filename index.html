@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankApp</title>
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <section class="sign-page">
+        <img src="./asset/logo.png" alt="" class="logo" />
+
+        <div class="btnStructure">
+          <button class="navBtn adminBtn btnActive">
+            Admin <ion-icon name="person-circle-outline"></ion-icon>
+          </button>
+          <button class="navBtn userBtn">
+            User <ion-icon name="people-circle-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="structure">
+          <div class="admin-login">
+            <input
+              type="text"
+              class="admin-username"
+              placeholder="admin username"
+            />
+            <input type="password" class="admin-pin" placeholder="admin PIN" />
+            <div class="lbtn">
+              <button class="btn admin-login-btn">sign in</button>
+            </div>
+          </div>
+          <div class="user-login">
+            <input type="number" class="user-username" placeholder="username" />
+            <input type="password" class="user-pin" placeholder="PIN" />
+            <div class="lbtn">
+              <button class="btn user-login-btn">sign in</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="signature">
+          <small>This app is created by <span>Shykat Raha</span></small>
+        </div>
+        <div class="error-message">
+          <small class=""
+            >Please insert the correct credential. For help call 10064
+          </small>
+          <ion-icon name="close-circle-outline" class="cross"></ion-icon>
+        </div>
+      </section>
+
+      <!-- Start----------------Admin UI--------------------Section -->
+
+      <section class="adminMain">
+        <div class="firstRow">
+          <div class="some-info">
+            <h1>Welcome back <span class="userWhoLogin"></span></h1>
+            <h4 class="title">title</h4>
+            <p>As of <span class="date">05/06/2022</span></p>
+            <small>At <span class="time">03-20-44</span></small>
+          </div>
+
+          <img src="./asset/logo.png" style="width: 15%" alt="" srcset="">
+
+          <div class="profileBtn">
+            <img src="./asset/admin3.jpg" alt="profile picture" class="pp" />
+            <button class="logout">logout</button>
+          </div>
+        </div>
+
+        <div class="navigation">
+
+          <button class="allAccounts activeMenu">
+            All Accounts <ion-icon name="server-outline"></ion-icon>
+          </button>
+
+          <button class="closeAcc">
+            Close Account <ion-icon name="trash-outline"></ion-icon>
+          </button>
+
+          <button class="trans">
+            Transictions <ion-icon name="server-outline"></ion-icon>
+          </button>
+
+          <button class="cardGen">
+            Card Genarator <ion-icon name="server-outline"></ion-icon>
+          </button>
+
+          
+        </div>
+
+        <div class="describePart">
+          
+          <div class="forAllAcnt swipCont">
+
+            <div class="upperCont">
+
+              <div class="text">
+                <h2>All Users</h2>
+                <p>You can see all your users here.</p>
+              </div>
+              <img src="./asset/logo.png" style="width: 10%;" alt="">
+
+            </div>
+            <div class="all-users-table">
+
+              <div class="user-row">
+                <small class="new-user-index">1</small>
+                <small class="new-user-name">Name</small>
+                <small class="new-user-accNo">Name</small>
+                <small class="new-user-email">Name</small>
+                <small class="new-user-PIN">Name</small>
+                <small class="new-user-amount">Name</small>
+              </div>
+
+              <div class="user-row">
+                <small class="new-user-index">1</small>
+                <small class="new-user-name">Name</small>
+                <small class="new-user-accNo">Name</small>
+                <small class="new-user-email">Name</small>
+                <small class="new-user-PIN">Name</small>
+                <small class="new-user-amount">Name</small>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="forClose swipCont">
+
+            <div class="upperCont">
+
+              <div class="text">
+                <h2>Close Account</h2>
+                <p>Please make sure from client to close the account.</p>
+              </div>
+              <img src="./asset/logo.png" style="width: 10%;" alt="">
+
+            </div>
+            <div class="close-acc">
+              <div class="note">
+                
+              </div>
+              <form class="delete-acc">
+                <div class="filed-row">
+                  <div class="inp-field">
+                    <label>Account Name <span>*</span></label>
+                    <input type="text" class="close-acc-name" required>
+                  </div>
+                  <div class="inp-field">
+                    <label>Account Number <span>*</span></label>
+                    <input type="number" class="close-acc-num" required>
+                  </div>
+                </div>
+
+                <div class="filed-row">
+                  <div class="inp-field">
+                    <label>PIN <span>*</span></label>
+                    <input type="password" class="close-acc-pin" required>
+                  </div>
+                  <div class="inp-field">
+                    <label>Confirm PIN <span>*</span></label>
+                    <input type="password" class="close-acc-cpin" required>
+                  </div>
+                </div>
+              </form>
+              
+            </div>
+            <div class="btn-row">
+              <button class="delete-info">delete <ion-icon name="trash-outline"></ion-icon></button>
+            </div>
+
+
+          </div>
+          <div class="forTrans swipCont">
+
+            <div class="upperCont">
+
+              <div class="text">
+                <h2>Transaction</h2>
+                <p>Please fill the fileds carefully.</p>
+              </div>
+              <img src="./asset/logo.png" style="width: 10%;" alt="">
+
+            </div>
+
+            <div class="transiction-sec">
+
+              <div class="details-panel">
+
+                <div class="user-search">
+                  <input type="number" placeholder="Enter Account Number" class="user-given-acnum">
+                  <button class="u-search">search <ion-icon name="search-outline"></ion-icon></button>
+                </div>
+
+                <div class="no-user">
+                  <p class="no-loan">No User Found</p>
+                </div>
+
+                <div class="user-details">
+
+                  <small>Name: <span class="user-details-name">user</span></small>
+
+                  <small>Account Number: <span class="user-details-num">12343454554</span></small>
+
+                  <small>Email: <span class="user-details-email">12343454554</span></small>
+
+                  <small>Total Amount: <span class="user-details-amount">5000 tk</span></small>
+
+                  <small>Total Loan: <span class="user-details-loan">1000 tk</span></small>
+
+                </div>
+
+              </div>
+              <div class="transfer-panel">
+
+                <h2>Transfer Money</h2>
+
+                <div class="inpRow">
+                  <input type="tel" required placeholder="Transfer to" class="transfer-to-acc">
+                  <input type="tel" required placeholder="Amount" class="transfer-to-amnt">
+                </div>
+                <p class="trans-error-message" style="color: rgb(192, 8, 8); margin: -25px 0 10px 0; padding: 3px 0px; border-radius: 4px;"></p>
+                <button class="sendBtn">send <ion-icon name="arrow-redo-outline"></ion-icon></button>
+
+              </div>
+              <div class="loan-panel">
+
+                <h2>Loan Money</h2>
+
+                <div class="inpRow">
+                  <input type="tel" required placeholder="Enter account no" class="loan-to-acc">
+                  <input type="tel" required placeholder="Amount" class="loan-to-amnt">
+                </div>
+                <p class="loan-error-message" style="color: rgb(91, 0, 0); margin: -25px 0 10px 0; padding: 3px 0px; border-radius: 4px;"></p>
+                <button class="loanBtn">send <ion-icon name="arrow-redo-outline"></ion-icon></button>
+
+              </div>
+              
+            </div>
+
+          </div>
+          
+          <div class="forCard swipCont">
+
+            <div class="upperCont">
+
+              <div class="text">
+                <h2>Cards</h2>
+                <p>Genarate cards for your user.</p>
+              </div>
+              <img src="./asset/logo.png" style="width: 10%;" alt="">
+
+            </div>
+
+            <div class="card-sec">
+
+
+              <div class="right-pannel">
+
+                <div class="inp-row">
+                  <input type="text" class="card-gen-acc" placeholder="Enter Account Number">
+                </div>
+                <div class="inp-row">
+                  <input type="text" class="card-gen-num" placeholder="Enter card number">
+                  <button class="cardGenerate">Genarate</button>
+                </div>
+                <div class="inp-row validation">
+                  <label>Valid Till:</label>
+                  <input type="text" class="expMonth" placeholder="Month">
+                  <label for="">/</label>
+                  <input type="text" class="expYear" placeholder="Year">
+                </div>
+                <div class="inp-row">
+                  <button class="create">create</button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          
+
+        </div>
+      </section>
+
+      <!-- Start-------------User UI-----------------------Section -->
+
+      <section class="userMain">
+
+        <div class="container">
+
+          <div class="sideBar">
+            <div class="hamburger">
+              <ion-icon class="toggler" name="menu-outline"></ion-icon>
+            </div>
+            <div class="sideMenu">
+              <p class="menuItem menui1 activeSideMenu">Dashboard <ion-icon name="list-outline"></ion-icon></p>
+              <p class="menuItem menui3">Card <ion-icon name="wallet-outline"></ion-icon></p>
+              <p class="menuItem menui4">Helpline <ion-icon name="navigate-circle-outline"></ion-icon></p>
+              <p class="menuItem menui5 userLogout" style="color: #ef233c;">logout <ion-icon name="exit-outline"></ion-icon></p>
+            </div>
+          </div>
+          <div class="contentBox cbx1">
+
+            <div class="avatarSec amnt">
+              <h1>Personal Details</h1>
+              <div class="avatar">
+                <img src="./asset/avatar.gif" class="mouse" alt="">
+              </div>
+              
+              <div class="personal-details">
+
+                <small>Name: <span class="personal-details-name">user</span></small>
+
+                <small>Account Number: <span class="personal-details-num">*******4554</span></small>
+
+                <small>PIN: <span class="personal-details-pin">1234</span></small>
+
+                <small>Email: <span class="personal-details-email">user@gmail.com</span></small>
+
+                <small>Number: <span class="personal-details-gender">0176532323</span></small>
+                <small>Number: <span class="personal-details-accType">0176532323</span></small>
+
+              </div>
+              <div class="bank">
+                <i class="lni lni-more"></i>
+              </div>
+            </div>
+            <div class="cardSec amnt">
+              <h1>Extra Information</h1>
+
+              <div class="personal-extra-details">
+
+                
+                <small>Account Verified by: <i>Shykat Raha</i></small>
+                <small>Verification ID: <span >*** *** ****</span></small>
+                <small>Nationality: <span >Bangladeshi</span></small>
+                <small>Account Type: <span >Regular</span></small>
+
+                <div style="margin-top: 8px">
+                  <small>Account Status:</small> <span class="personal-details-cont activecir">Active</span>
+                </div>
+               
+
+                
+
+              </div>
+              <div class="bank">
+                <i class="lni lni-more"></i>
+              </div>
+            </div>
+            <div class="totalAmountSec amnt">
+              <h1>Ammount</h1>
+
+              <div class="mainAmnt">
+                <h4>Total Balance</h4>
+                <p class="have">00 tk</p>
+              </div>
+              <div class="bank">
+                <i class="lni lni-more"></i>
+              </div>
+            </div>
+
+            <div class="transSec amnt">
+              <h1>Transactions</h1>
+
+              <div class="all-tranactions">
+
+                <!-- <div class="trans-row">
+                  
+                    <small class="deposit">1 Deposit</small>
+                    <small class="transAmntTo">*******5432</small>
+                    <h3 class="trans-amnt-part">4000 tk</h3>
+                  
+                </div> -->
+
+              </div>
+            </div>
+
+            <div class="totalLoanSec amnt">
+              <h1>Loan</h1>
+
+              <div class="mainAmnt">
+                <h4>Total Loan</h4>
+                <p class="not">00 tk</p>
+              </div>
+              <div class="bank">
+                <i class="lni lni-more"></i>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contentBox cbx3">
+     
+              <div class="card-demo">
+
+                <div class="card-front">
+                  <div class="card-cont">
+                  <div class="top-sec">
+                    <div class="logo-name">
+                      <i class="lni lni-credit-cards"></i>
+                      <span>E Dot Bank</span>
+                    </div>
+                    <h1>DEBIT</h1>
+                  </div>
+                  <div class="middle-sec">
+                    <img src="./asset/sim.png" style="width: 15%;" class="sim">
+                    <img src="./asset/mastercard.png" style="width: 20%;" class="master">
+                  </div>
+                  <div class="num-sec">
+                    <p><span>7834</span><span>1265</span><span>5524</span><span>8011</span></p>
+                  </div>
+                  
+                  <div class="bottom-sec">
+                    <div class="expire">
+                      <h4>Valid Till: <span>06/30</span></h4>
+                    </div>
+                    <img src="./asset/visa.png" style="width: 15%;" alt="">
+                  </div>
+                </div>
+                </div>
+                <div class="card-back">
+
+                  <div class="top-sec">
+                    <small>24X7 Call Center: 10095 | Head Office: +88016098123</small>
+                    <small>KFDFD123</small>
+                  </div>
+                  <div class="blank-sec"></div>
+                  <div class="middle-sec">
+                    <img src="./asset/sim-back.png" alt="">
+                    <div class="cvv">
+                      <p style="font-style: italic;font-weight:600">CVV</p>
+                    </div>
+                    
+                  </div>
+                  <div class="num-sec">
+                    <p><span>7834</span><span>1265</span><span>5524</span><span>8011</span></p>
+                  </div>
+                  <div class="bottom-sec">
+                    <img src="./asset/mastercard.png" alt="">
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta officiis voluptate, voluptates quae deleniti quam odit autem neque. Ratione, sequi facilis? Enim quo beatae animi voluptatum earum! Sed, veritatis!</small>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-apply">
+                <h1 class="heading">Application for card</h1>
+
+                <div class="user-card card-hide">
+
+                  <div class="front">
+                    <div class="front-cont">
+                      <div class="top-sec">
+                        <div class="logo-name">
+                          <i class="lni lni-credit-cards"></i>
+                          <span>E Dot Bank</span>
+                        </div>
+                        <h1>DEBIT</h1>
+                      </div>
+                      <div class="middle-sec">
+                        <img src="./asset/sim.png" style="width: 15%;" class="sim">
+                        <img src="./asset/mastercard.png" style="width: 20%;" class="master">
+                      </div>
+                      <div class="num-sec">
+                        <p><span class="fi">7834</span><span class="s">1265</span><span class="t">5524</span><span class="fo">8011</span></p>
+                      </div>
+                      
+                      <div class="bottom-sec">
+                        <div class="expire">
+                          <h4>Valid Till: <span class="vaMonth">00</span><span>/</span><span class="vaYear">00</span></h4>
+                        </div>
+                        <img src="./asset/visa.png" style="width: 15%;" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="back">
+                    <div class="blank"></div>
+                    <div class="user-cvv">
+                      <img src="./asset/sim-back.png"  alt="">
+                      <p class="u-cvv">745</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="user-card-application">
+                  <p>Dear Sir/Mam,</p>
+                  <p>Application for account card genarate.</p>
+                  <br>
+                  <p>Hi, I am a user of your E do Bank. I haven't got my debit card/master card/credit card yet. But now I need the card for online transactions and other purposes. So I request you to give me my desire card as soon as possible.</p><br>
+                  <p class="application-note">Notes:</p>
+                  <p>
+                    <ul>
+                      <li>I will not share my PIN anyone.</li>
+                      <li>I will not able to withdrawl more than 50,000/- per day.</li>
+                      <li>I can change any information to call 19975.</li>
+                    </ul>
+                  </p>
+                  <br>
+                  <p>Thank you.</p>
+                  <br><br>
+                  <button class="apply-card">apply</button>
+                </div>
+
+              </div>
+
+          </div>
+          <div class="contentBox cbx4">
+            <div class="cls-acnt">
+              <h1>Helpline & Contact</h1>
+
+              <div class="contact-box">
+
+                <p>Hotline Number: +88084343432</p>
+                <p>Head Office: 10092</p>
+                <p>Branches: Dhaka | Khulna | Jessore | Barisal | Magura</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./admin_info.js"></script>
+    <script src="./user_info.js"></script>
+    <script src="./divTrans.js"></script>
+    <script src="./app.js"></script>
+    <script src="./timeDate.js"></script>
+  </body>
+</html>
